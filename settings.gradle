@@ -1,0 +1,2 @@
+rootProject.name = 'LiveStreamSTB'
+include ':app'
