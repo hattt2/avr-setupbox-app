@@ -1,0 +1,21 @@
+workflows:
+  android-livestream-debug:
+    name: Android TV LiveStream Debug Build
+    environment:
+      vars:
+        MODULE: app
+      android_signing: null
+      java: 17
+    scripts:
+      - name: Set up environment
+        script: |
+          echo "Using module: $MODULE"
+      - name: Build Debug APK
+        script: |
+          ./gradlew :$MODULE:assembleDebug
+    artifacts:
+      - app/build/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - your.email@example.com
