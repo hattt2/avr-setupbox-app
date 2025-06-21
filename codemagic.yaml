@@ -4,7 +4,6 @@ workflows:
     environment:
       vars:
         MODULE: app
-      android_signing: null
       java: 17
     scripts:
       - name: Set up environment
@@ -18,4 +17,4 @@ workflows:
     publishing:
       email:
         recipients:
-          - your.email@example.com
+          - hatimnagdawala@gmail.com
